@@ -1,0 +1,194 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 10%;
+  min-height: 100vh; /* Set min-height to 1.8 of the viewport height */
+  width: 100%; /* Ensure the contact section spans the full width */
+  background-color: #f2f2f2;
+}
+
+.contact-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.decorative-element {
+  display: inline-block;
+  width: 50px; /* Adjust to your design */
+  height: 50px; /* Adjust to your design */
+  background-color: #ddd; /* Placeholder for decorative elements */
+  margin: 0 1rem;
+}
+
+.contact-body {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* Allocate 3/4 to the form and 1/4 to the info */
+  gap: 2rem; /* Space between form and info */
+  width: 100%;
+}
+
+.contact-form h1 {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.contact-form h1 span {
+  font-weight: 700;
+  color: #8c8c73;
+}
+
+.contact-form {
+  grid-column: 1 / 2; /* Start at line 1 and end at line 3 */
+  display: flex;
+  flex-direction: column;
+  gap: 3rem; /* Space between form items */
+  text-align: left;
+}
+/* Create a flex container for the name and email inputs */
+.input-group {
+  display: flex;
+  gap: 1rem; /* Space between the inputs */
+}
+
+.input-group input {
+  flex: 1; /* Each input takes up equal space in the flex container */
+  max-width: calc(50% - 0.5rem); /* Adjust max-width to account for the gap */
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-family: 'CabinetGrotesk', sans-serif;
+  color: #0e0e0c;
+  font-size: 1.5rem;
+  background-color: transparent; /* Remove background */
+  border: none; /* Remove borders */
+  border-bottom: 2px solid #aeae9d; /* Add only bottom border */
+  padding: 0.5rem 0; /* Padding to space text away from the border */
+  margin: 0.5rem 0; /* Margin to space between inputs */
+}
+
+.contact-form textarea {
+  resize: vertical;
+  height: 3rem;
+}
+
+.contact-form button {
+  background-color: #0e0e0c;
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  align-self: flex-start; /* Aligns the button to the left */
+  transition: background-color 0.3s; /* Optional: for a hover effect */
+  width: 15%;
+  border-radius: 50px;
+}
+
+.contact-form button:hover {
+  background-color: #333; /* Darker background on hover */
+}
+
+/* Style for inputs and textarea on focus */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none; /* Removes the default focus outline */
+  border-bottom: 2px solid #8c8c73; /* Changes the bottom border color for focus */
+}
+
+/* If you want to add some animation to the border on focus */
+.contact-form input:focus::after,
+.contact-form textarea:focus::after {
+  content: '';
+  display: block;
+  margin-top: -2px;
+  height: 2px;
+  background-color: #555;
+  transition: width 0.4s ease;
+  width: 100%; /* Will create an effect of line growing from center to the sides */
+}
+
+.contact-info {
+  text-align: left;
+  grid-column: 2 / 4; /* Start at line 3 and end at line 4 */
+  padding-left: 3rem; /* Give some padding from the grid gap */
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  font-family: 'CabinetGrotesk', sans-serif;
+  color: #8c8c73; /* Placeholder text color */
+  font-style: normal; /* Placeholder text style */
+  font-size: 1.5rem;
+}
+
+.contact-info h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  color: #8c8c73;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.socials .github-padding {
+  padding-bottom: 1rem;
+}
+.contact-icon {
+  margin-right: 0.5rem; /* Space between the icon and the text */
+  vertical-align: middle; /* Align the icon with the text */
+  width: 1.5rem; /* Adjust based on your design */
+  height: auto; /* Maintain the aspect ratio */
+}
+
+.success-message {
+  color: #28a745; /* Green color for success */
+  margin-left: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .contact {
+    padding: 2rem 5%; /* Less horizontal padding on smaller screens */
+  }
+  .contact-body {
+    grid-template-columns: 1fr; /* Stack the form and info on top of each other on small screens */
+  }
+
+  .contact-form,
+  .contact-info {
+    grid-column: 1 / -1; /* Let each take full width of the grid */
+    padding: 0; /* Reset padding for small screens */
+  }
+
+  /* You might want to keep the button size consistent on mobile, or adjust as needed */
+  .contact-form button {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    width: auto;
+    margin-top: 1rem;
+  }
+
+  .input-group {
+    flex-direction: column; /* Stack inputs vertically on smaller screens */
+  }
+
+  .input-group input {
+    max-width: none; /* Inputs can take full width on smaller screens */
+  }
+}

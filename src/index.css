@@ -1,0 +1,128 @@
+@import '../src/fonts/fonts.css';
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  overflow-x: hidden; /* Prevents horizontal scroll */
+  scroll-behavior: smooth;
+  font-family: 'GeneralSans', sans-serif;
+  font-weight: 400;
+}
+p {
+  font-family: 'CabinetGrotesk', sans-serif;
+  font-weight: 400;
+}
+.section-title {
+  font-size: 7rem;
+  font-weight: 600;
+  letter-spacing: -0.5rem;
+  color: #8c8c73;
+  margin: 5rem 0;
+}
+.section-title-brighter {
+  font-size: 7rem;
+  font-weight: 600;
+  letter-spacing: -0.5rem;
+  color: #aeae9d;
+  margin: 5rem 0;
+}
+
+.title-icon {
+  width: 5rem;
+  height: auto;
+  transform: scaleX(-1);
+}
+
+.title-icon-left {
+  margin-right: 1rem;
+}
+
+.title-icon-right {
+  margin-left: 1rem;
+  transform: none;
+}
+:root {
+  --scrollbar-bg: #f2f2f2; /* Default scrollbar background */
+  --scrollbar-thumb: #262626; /* Default scrollbar thumb color */
+}
+/* Base style for webkit-based browsers */
+::-webkit-scrollbar {
+  width: 20px; /* Narrower width for all screens */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+/* Styles the scrollbar track for WebKit-based browsers */
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-bg);
+}
+
+/* Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-bg);
+}
+
+/* Removing arrows - Not directly possible with CSS for all browsers,
+   modern custom scrollbars typically don't show arrows. */
+
+/* Responsive adjustments for medium screens, e.g., tablets */
+@media (max-width: 1024px) {
+  .section-title,
+  .section-title-brighter {
+    font-size: 5rem; /* Smaller font size for medium screens */
+    margin: 4rem 0; /* Adjust margin as needed */
+  }
+
+  .title-icon {
+    width: 4rem; /* Smaller icon size for medium screens */
+  }
+}
+
+/* Responsive adjustments for small screens, e.g., mobile phones */
+@media (max-width: 768px) {
+  .section-title,
+  .section-title-brighter {
+    font-size: 3.5rem; /* Smaller font size for small screens */
+    margin: 3rem 0; /* Adjust margin as needed */
+    letter-spacing: -0.3rem; /* Adjust letter spacing as needed */
+  }
+
+  .title-icon {
+    width: 3rem; /* Smaller icon size for small screens */
+  }
+
+  /* Adjusting left and right icon margins */
+  .title-icon-left {
+    margin-right: 0.5rem;
+  }
+
+  .title-icon-right {
+    margin-left: 0.5rem;
+  }
+  ::-webkit-scrollbar {
+    width: 12px; /* Wider scrollbar on larger screens */
+  }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 2.5rem; /* Even smaller font size for very small screens */
+    margin: 2rem 0; /* Adjust margin as needed */
+    letter-spacing: -0.2rem; /* Adjust letter spacing as needed */
+  }
+
+  .title-icon {
+    width: 2.5rem; /* Even smaller icon size for very small screens */
+  }
+}

@@ -1,0 +1,229 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #262626;
+  min-height: 180vh;
+  width: 100%;
+}
+
+.projects-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+/* Project Container */
+.project-container {
+  display: grid;
+  grid-template-columns: 1fr; /* Default single column layout */
+  gap: 40px;
+  width: 100%;
+  padding: 8px;
+  margin: 2rem 0;
+}
+
+.project-container.last-projects {
+  grid-template-columns: 1fr 1fr; /* Two columns for the last projects */
+  gap: 40px;
+}
+
+/* Common project styles */
+.project {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #f2f2f2;
+  border-radius: 1.5rem;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out; /* Add smooth scaling transition to the project container */
+}
+
+.project:hover .project-img {
+  transform: scale(1.02); /* Enlarge the project image on hover */
+}
+
+.project-img-container {
+  width: 100%;
+  padding: 2rem 5rem;
+  margin-bottom: 0;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.project-img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;
+  transition: transform 0.3s ease-in-out; /* Add smooth scaling transition to the image */
+}
+
+.project-info {
+  width: 100%;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 0 0 1.5rem 1.5rem;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: auto;
+  position: relative;
+  color: #000; /* Set text to black by default */
+}
+
+/* Set project title and description to remain unchanged for all projects */
+.project-info h3,
+.project-info p.project-description {
+  color: #000;
+}
+
+.project-info h3 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Add styles for year and tech stack with border, radius, and matching font size */
+.project-info p.project-year,
+.project-info p.project-tech {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  border: 2px solid #8c8c73;
+  border-radius: 4rem;
+  color: #000;
+  margin-right: 1rem; /* Space between year and tech stack */
+  font-size: 1.2rem; /* Set year and tech stack text to the same size */
+}
+
+/* Project description adjustments */
+.project-info p.project-description {
+  font-size: 1.2rem; /* Increase font size */
+  margin-bottom: 1rem; /* Add space below the description */
+}
+
+/* Restore unique styles for Project 2 */
+.project.project-2 .project-info h3,
+.project.project-2 .project-info p.project-description {
+  color: #f2f2f2; /* Set title and description to white */
+}
+
+.project.project-2 .project-info p.project-year,
+.project.project-2 .project-info p.project-tech {
+  background: #000; /* Set background to black */
+  color: #f2f2f2; /* Set text color to white */
+  border: 2px solid #f2f2f2; /* Set border color to white */
+}
+
+/* Links styling */
+.project-info .links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Add border and radius to GitHub and Website links */
+.project-info .links a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #aeae9d;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid #8c8c73;
+  border-radius: 4rem;
+  background: rgba(0, 0, 0, 0.8);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.project-info .links a:hover {
+  background: #aeae9d;
+  color: #fff;
+}
+
+.project-info .links a img {
+  width: 20px;
+  height: auto;
+  margin-right: 0.5rem;
+}
+
+/* Separator for Older Projects */
+.older-projects-separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem 0;
+  width: 100%;
+  position: relative;
+}
+
+.separator-line {
+  flex: 1;
+  height: 1px;
+  overflow: hidden;
+  position: relative;
+  background: none;
+}
+
+.separator-line .line-inner {
+  width: 0%; /* Start with width 0% */
+  height: 1px;
+  background-color: #8c8c73;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.older-projects-separator span {
+  font-size: 1.5rem;
+  color: #f2f2f2;
+  background-color: #262626;
+  padding: 0 1rem;
+  white-space: nowrap; /* Prevent text from wrapping */
+  z-index: 1; /* Ensure the text stays above the lines */
+}
+
+/* Adjustments for projects 3 and 4 */
+.project.project-3 .project-info h3,
+.project.project-4 .project-info h3 {
+  font-size: 2rem; /* Adjusted font size */
+}
+
+.project.project-3 .project-info p.project-year,
+.project.project-3 .project-info p.project-tech,
+.project.project-3 .project-info .links a,
+.project.project-4 .project-info p.project-year,
+.project.project-4 .project-info p.project-tech,
+.project.project-4 .project-info .links a {
+  font-size: 1rem; /* Consistent font size */
+}
+
+.project.project-3 .project-info p.project-description,
+.project.project-4 .project-info p.project-description {
+  font-size: 1.2rem; /* Ensure consistent font size */
+  margin-bottom: 1rem; /* Ensure consistent spacing */
+}
+
+@media (max-width: 768px) {
+  .project-container,
+  .project-container.last-projects {
+    grid-template-columns: 1fr; /* Stack projects on smaller screens */
+  }
+
+  .project {
+    width: 100%;
+  }
+
+  .project-img {
+    max-height: 200px;
+  }
+}

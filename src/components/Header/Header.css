@@ -1,0 +1,93 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0; /* Align to the left edge of the screen */
+  right: 0; /* Align to the right edge of the screen */
+  padding: 0 5%; /* Add 10% padding to both sides */
+  background: #f2f2f2;
+  z-index: 10;
+  animation: slideDown 1s ease-out forwards; /* Apply the animation */
+  /* ... other styles ... */
+}
+
+.logo img {
+  height: auto; /* Maintain aspect ratio */
+  width: 100px; /* Or whatever size you prefer */
+}
+
+.navbar {
+  display: flex;
+  gap: 4rem; /* Space between nav items */
+  justify-content: space-between; /* This will add space between the items */
+  align-items: center;
+}
+
+.navbar a {
+  padding: 0.5 1rem; /* This adds space on both sides of each link. Adjust the value as needed. */
+  text-decoration: none;
+  color: #0e0e0c; /* Change as needed */
+  font-size: 1.2rem;
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.navbar a:hover {
+  color: #666666; /* Change as needed */
+}
+
+.navbar a:last-child {
+  background-color: #0e0e0c;
+  color: #fff;
+  padding: 0.5rem 1rem; /* Adjust padding to fit your design */
+  border-radius: 50px; /* Creates a pill shape; adjust as needed for desired roundness */
+  display: inline-block; /* Allows for padding and border-radius to take effect */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  border: 1px solid #0e0e0c;
+}
+.navbar a:last-child:hover {
+  color: #0e0e0c; /* Change as needed */
+  background-color: #fff;
+}
+
+/* Hide all navbar links except the contact link on smaller screens */
+@media (max-width: 768px) {
+  .navbar a:not(.contact-link) {
+    display: none;
+  }
+
+  /* Update the logo size and navbar layout for small screens */
+  .logo img {
+    width: 90px; /* Smaller logo on mobile */
+  }
+
+  .navbar {
+    gap: 1rem; /* Smaller gap if needed */
+  }
+
+  .header {
+    justify-content: space-between; /* Keep logo and contact button on opposite sides */
+  }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+  .logo img {
+    width: 80px; /* Even smaller logo for very small screens */
+  }
+
+  .navbar .contact-link {
+    padding: 0.3rem 0.6rem; /* Adjust padding for small screens */
+    font-size: 1rem; /* Smaller font size for the contact link */
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%); /* Start from above the top edge */
+  }
+  to {
+    transform: translateY(0); /* End at the normal position */
+  }
+}
