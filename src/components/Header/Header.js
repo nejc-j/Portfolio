@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Header.css';
 
 const Header = () => {
-  const [logoSrc, setLogoSrc] = useState('/icons/logo-dark.png'); // Start with light logo
+  const [logoSrc] = useState('/icons/logo-dark.png'); // Start with light logo
 
   // Smooth scroll to section function
   const scrollToSection = (sectionId) => {
