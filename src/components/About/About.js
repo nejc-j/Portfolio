@@ -1,4 +1,5 @@
 import React from 'react';
+import profilePic from '../../assets/profile_picture.jpg';
 import './About.css';
 
 const About = () => {
@@ -60,11 +61,7 @@ const About = () => {
       </div>
       <div className='about-body'>
         <div className='profile-placeholder'>
-          <img
-            src='/projects/profile_picture.jpg'
-            alt='Profile'
-            className='profile-img'
-          />
+          <img src={profilePic} alt='Profile' className='profile-img' />
         </div>
         <div className='introduction'>
           <h3>Brief introduction</h3>
