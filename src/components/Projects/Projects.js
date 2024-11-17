@@ -24,7 +24,7 @@ const Projects = () => {
       techStack: 'Next.js • React • Tailwind',
       githubLink: 'https://github.com/nejc-j/coaching-platform',
       websiteLink: 'https://coachup.netlify.app/',
-      imgSrc: '/projects/coachup.png',
+      imgSrc: '/projects/coachup.jpg',
       bgImage: '/projects/coachup-bg.jpg',
     },
     {
