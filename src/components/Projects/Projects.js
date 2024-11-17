@@ -48,7 +48,7 @@ const Projects = () => {
       techStack: 'HTML • JavaScript • Tailwind',
       githubLink: 'https://github.com/nejc-j/Recipe-Finder',
       websiteLink: 'https://master--recipefinder-jernejjakop.netlify.app/',
-      imgSrc: '/projects/recipefinder.png',
+      imgSrc: '/projects/recipefinder.jpg',
       bgImage: '/projects/recipefinder-bg.jpg',
     },
   ];
