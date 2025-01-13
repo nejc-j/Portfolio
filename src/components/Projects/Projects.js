@@ -1,5 +1,6 @@
 import React from 'react';
 import './Projects.css';
+import { MdConstruction } from 'react-icons/md';
 
 const Projects = () => {
   const projects = [
@@ -17,7 +18,7 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: 'CoachUP',
+      title: 'CoachUP ',
       description:
         'CoachUP is a platform that connects users with professional sports coaches, catering to individuals seeking to explore new sports or enhance their skills in a specific discipline. The platform offers an accessible way for users to find and engage with qualified coaches, supporting personal growth and athletic improvement through tailored coaching services.',
       year: '2024',
@@ -128,7 +129,23 @@ const Projects = () => {
               />
             </div>
             <div className='project-info'>
-              <h3>{project.title}</h3>
+              <h3>
+                {project.title}
+                {project.id === 2 && (
+                  <span
+                    style={{
+                      color: '#FFD700',
+                      fontSize: '0.8em',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '0.2em',
+                    }}
+                  >
+                    (under construction <MdConstruction />)
+                  </span>
+                )}
+              </h3>
+
               <p className='project-year'>{project.year}</p>
               <p className='project-tech'>{project.techStack}</p>
               <p className='project-description'>{project.description}</p>
