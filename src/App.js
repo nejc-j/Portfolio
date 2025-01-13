@@ -85,7 +85,7 @@ const App = () => {
       end: 'bottom center',
       pinSpacing: true,
       scrub: true,
-      markers: true,
+      //markers: true,
     });
 
     // TECHNOLOGIES Section Title and Icon Animations
@@ -121,7 +121,7 @@ const App = () => {
         end: '+=200%',
         pin: true, // Pin the whole technologies section
         scrub: true,
-        markers: true,
+        //markers: true,
       },
     });
 
@@ -222,7 +222,7 @@ const App = () => {
         });
         logoImg.src = '/icons/logo-dark.png';
       },
-      markers: true,
+      //markers: true,
     });
 
     // PROJECTS Section: Animate Older Projects Separator Lines
@@ -234,7 +234,7 @@ const App = () => {
           end: '+=1500', // Extend the scroll distance over which the animation occurs
           scrub: true,
           toggleActions: 'play none none none',
-          // markers: true, // Uncomment for debugging
+          // //markers: true, // Uncomment for debugging
         },
       })
       .fromTo(
@@ -287,7 +287,7 @@ const App = () => {
           logoImg.src = '/icons/logo-light.png';
         }
       },
-      markers: true,
+      //markers: true,
     });
 
     // PROJECTS Section Animations
@@ -310,7 +310,7 @@ const App = () => {
           start: `top bottom-=${vhOffsetProjects}px`,
           end: 'bottom top',
           toggleActions: 'play none none none',
-          markers: true,
+          //markers: true,
         },
       }
     );
