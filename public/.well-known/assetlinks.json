@@ -6,7 +6,7 @@
     ],
     "target": {
       "namespace": "android_app",
-      "package_name": "com.smkwinner.cred_manager.credential_manager_example",
+      "package_name": "com.example.poc_passkey_login",
       "sha256_cert_fingerprints": [
         "8E:65:9C:CB:E0:CD:AA:5C:7D:2C:25:6D:42:3A:7B:EA:01:33:08:0E:F2:00:98:1F:7E:A5:03:F0:9C:D5:28:A4"
       ]
